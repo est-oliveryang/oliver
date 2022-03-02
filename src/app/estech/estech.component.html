@@ -1,0 +1,218 @@
+<div id="top"></div>
+<a id="back-to-top" href="#top">
+  <img src="data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' aria-labelledby='title' aria-describedby='desc' role='img' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3EAngle Up%3C/title%3E%3Cdesc%3EA line styled icon from Orion Icon Library.%3C/desc%3E%3Cpath data-name='layer1' fill='none' stroke='%23202020' stroke-miterlimit='10' stroke-width='2' d='M20 40l11.994-14L44 40' stroke-linejoin='round' stroke-linecap='round'%3E%3C/path%3E%3C/svg%3E" alt="Angle Up" />
+</a>
+<div class="content">
+  宗茂所有的產品以及下面列出監控相關的專案均架構於ARM-based的嵌入式Linux平台，並使用RWD網頁作為介面。
+</div>
+<br>
+<div id="powerplant">
+  <h3>桂山電廠</h3>
+  <div class="content">
+    <div>本專案利用公司產品CGate為基礎，讀取已經拉回控制室的翡翠水庫放水閘門開啟角度電流訊號，配合使用者自訂並上傳的訊號/開啟角度對照表，計算各個水閘門開啟角度資料並發送至中控面板，同時提供網頁介面供操作人員監測及設定系統。</div>
+    <div class="slideshow-container">
+      <div *ngFor="let idx of powerplantNum" class="mySlides fade power">
+        <div class="numbertext">{{idx+1}} / {{powerplantNum.length}}</div>
+        <img src="./assets/images/power{{idx}}.jpg" style="width:100%">
+        <!-- <div class="text">{{cap}}</div> -->
+      </div>
+      <a class="prev" (click)="plusSlides(-1, 'power')">&#10094;</a>
+      <a class="next" (click)="plusSlides(1, 'power')">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span *ngFor="let idx of powerplantNum"><span class="dot power" (click)="currentSlide(idx, 'power')"></span></span>
+    </div>
+  </div>
+</div>
+<div id="water">
+  <h3>廢水監測</h3>
+  <div class="content">
+    <div>此廢水監測系統利用宗茂的嵌入式裝置，擷取某大廠某廠區廢水處理設施內已有的監測數據，透WebAPI的方式上傳至此大廠內部資訊系統，保留斷線30日內斷線補傳功能以及系統記錄。測試時達到資料上傳漏失率 &lt; 1%、資料正確率 &gt; 99%、資料更新至上傳完畢 &lt; 1秒鐘的標準。</div>
+    <div class="slideshow-container">
+      <div *ngFor="let idx of waterNum" class="mySlides fade water" >
+        <div class="numbertext">{{idx+1}} / {{waterNum.length}}</div>
+        <img src="./assets/images/water{{idx}}.jpg" style="width:100%">
+        <!-- <div class="text">{{cap}}</div> -->
+      </div>
+      <a class="prev" (click)="plusSlides(-1, 'water')">&#10094;</a>
+      <a class="next" (click)="plusSlides(1, 'water')">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span *ngFor="let idx of waterNum"><span class="dot water" (click)="currentSlide(idx, 'water')"></span></span>
+    </div>
+  </div>  
+</div>
+<div id="orchid">
+  <h3>蘭花生長環境監測</h3>
+  <div class="content">
+    <div>規劃並設計蘭花生長環境監測所需網路環境、資料蒐集器、主機網頁及程式，24小時監測蘭花生長狀況，並保留生長過程的所有紀錄。</div>
+    <div class="slideshow-container">
+      <div *ngFor="let idx of orchidNum" class="mySlides fade orchid">
+        <div class="numbertext">{{idx+1}} / {{orchidNum.length}}</div>
+        <img src="./assets/images/orchid{{idx}}.jpg" style="width:100%">
+        <!-- <div class="text">{{cap}}</div> -->
+      </div>
+      <a class="prev" (click)="plusSlides(-1, 'orchid')">&#10094;</a>
+      <a class="next" (click)="plusSlides(1, 'orchid')">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span *ngFor="let idx of orchidNum"><span class="dot orchid" (click)="currentSlide(idx, 'orchid')"></span></span>
+    </div>
+  </div>   
+</div>
+<div id="grow">
+  <h3>作物生長燈光控制</h3>
+  <div class="content">
+    <div>設計三種作物AI點燈介面，依照AI計算結果自動開啟相對應的光源及強度，保留手動新增生長紀錄以及自動點燈的紀錄。</div>
+    <div class="slideshow-container">
+      <div *ngFor="let idx of growNum" class="mySlides fade grow">
+        <div class="numbertext">{{idx+1}} / {{growNum.length}}</div>
+        <img src="./assets/images/grow{{idx}}.jpg" style="width:100%">
+        <!-- <div class="text">{{cap}}</div> -->
+      </div>
+      <a class="prev" (click)="plusSlides(-1, 'grow')">&#10094;</a>
+      <a class="next" (click)="plusSlides(1, 'grow')">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span *ngFor="let idx of growNum"><span class="dot grow" (click)="currentSlide(idx, 'grow')"></span></span>
+    </div>
+  </div>
+</div>
+<div id="bdl">
+  <h3>無塵室溫濕度監測</h3>
+  <div class="content">
+    <div>於國內某生醫研發單位的11個無塵實驗室，裝設溫濕度監測系統，使用宗茂產品EM-01降低開發成本，達到溫濕度遠端監測、警報及紀錄功能。</div>
+    <div class="slideshow-container">
+      <div *ngFor="let idx of htNum" class="mySlides fade ht">
+        <div class="numbertext">{{idx+1}} / {{htNum.length}}</div>
+        <img src="./assets/images/ht{{idx}}.jpg" style="width:100%">
+        <!-- <div class="text">{{cap}}</div> -->
+      </div>
+      <a class="prev" (click)="plusSlides(-1, 'ht')">&#10094;</a>
+      <a class="next" (click)="plusSlides(1, 'ht')">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span *ngFor="let idx of htNum"><span class="dot ht" (click)="currentSlide(idx, 'ht')"></span></span>
+    </div>
+  </div>
+</div>
+<div id="park">
+  <h3>機械停車場自動化監控</h3>
+  <div class="content">
+    <div>開發智慧化停車場設備管理系統，彙整刷卡機、PLC資料並發送字幕機播報訊息，當設備有異常狀況發生時，還整合了即時通訊軟體通知管理者、工程人員、客戶，平時也可以做為工程師的現場打卡系統，確實監督保養維護工作維持設備的安全運轉。</div>
+    <div class="slideshow-container">
+      <div *ngFor="let idx of parkNum" class="mySlides fade park">
+        <div class="numbertext">{{idx+1}} / {{parkNum.length}}</div>
+        <img src="./assets/images/park{{idx}}.jpg" style="max-width:100%">
+        <!-- <div class="text">{{cap}}</div> -->
+      </div>
+      <a class="prev" (click)="plusSlides(-1, 'park')">&#10094;</a>
+      <a class="next" (click)="plusSlides(1, 'park')">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span *ngFor="let idx of parkNum"><span class="dot park" (click)="currentSlide(idx, 'park')"></span></span>
+    </div>
+  </div>  
+</div>
+<div id="save">
+  <h3>建築工地袪水節能監控系統</h3>
+  <div class="content">
+    <div>以宗茂產品EM-01為基礎，為客戶開發之節能監控控制器，搭配客戶的節能系統，連接各類錶頭、馬達變頻器，應用於建築工地，減少地下水過度抽取，達到節能監控的目的。此控制系統客戶已經運用於多個建築工地，待完工撤離後，重新設定後即可於新的工地使用。
+    </div>
+    <div class="slideshow-container">
+      <div *ngFor="let idx of saveNum" class="mySlides fade save">
+        <div class="numbertext">{{idx+1}} / {{saveNum.length}}</div>
+        <img src="./assets/images/save{{idx}}.jpg" style="max-width:100%">
+        <!-- <div class="text">{{cap}}</div> -->
+      </div>
+      <a class="prev" (click)="plusSlides(-1, 'save')">&#10094;</a>
+      <a class="next" (click)="plusSlides(1, 'save')">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span *ngFor="let idx of saveNum"><span class="dot save" (click)="currentSlide(idx, 'save')"></span></span>
+    </div>
+  </div>  
+</div>
+<div id="aircon">
+  <h3>大樓冰水主機節能監測及通報</h3>
+  <div class="content">
+    <div>運用上述節能監控控制器，搭配宗茂MNode通報系統，達到大樓冰水主機節能監控和多群組即時LINE通報的目的。</div>
+    <div class="slideshow-container">
+      <div *ngFor="let idx of airconNum" class="mySlides fade aircon">
+        <div class="numbertext">{{idx+1}} / {{airconNum.length}}</div>
+        <img src="./assets/images/aircon{{idx}}.jpg" style="width:100%">
+        <!-- <div class="text">{{cap}}</div> -->
+      </div>
+      <a class="prev" (click)="plusSlides(-1, 'aircon')">&#10094;</a>
+      <a class="next" (click)="plusSlides(1, 'aircon')">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span *ngFor="let idx of airconNum"><span class="dot aircon" (click)="currentSlide(idx, 'aircon')"></span></span>
+    </div>
+  </div>  
+</div>
+<div id="agv">
+  <h3>AGV/RGV路線規劃及狀態顯示</h3>
+  <div class="content">
+    <div>設計網頁介面給某研究單位開發的AGV/RGV系統，協助其快速建立路線、顯示車輛動態、發送部分系統控制指令。</div>
+    <div class="slideshow-container">
+      <div *ngFor="let idx of agvNum" class="mySlides fade agv">
+        <div class="numbertext">{{idx+1}} / {{agvNum.length}}</div>
+        <img src="./assets/images/agv{{idx}}.jpg" style="width:100%">
+        <!-- <div class="text">{{cap}}</div> -->
+      </div>
+      <a class="prev" (click)="plusSlides(-1, 'agv')">&#10094;</a>
+      <a class="next" (click)="plusSlides(1, 'agv')">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span *ngFor="let idx of agvNum"><span class="dot agv" (click)="currentSlide(idx, 'agv')"></span></span>
+    </div>
+  </div>  
+</div>
+<div id="ps7m">
+  <h3>氣體偵測器網頁動態功能新增</h3>
+  <div class="content">
+    <div>協助日本氣體偵測器大廠更新旗下一款多功能氣體偵測器的網頁，新增原本沒有的氣體種類、濃度、流量以及許多狀態參數，系統環境為TI的32位元微處理器。</div>
+    <div class="slideshow-container">
+      <div *ngFor="let idx of ps7Num" class="mySlides fade ps7">
+        <div class="numbertext">{{idx+1}} / {{ps7Num.length}}</div>
+        <img src="./assets/images/ps7{{idx}}.jpg" style="width:100%">
+        <!-- <div class="text">{{cap}}</div> -->
+      </div>
+      <a class="prev" (click)="plusSlides(-1, 'ps7')">&#10094;</a>
+      <a class="next" (click)="plusSlides(1, 'ps7')">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span *ngFor="let idx of ps7Num"><span class="dot ps7" (click)="currentSlide(idx, 'ps7')"></span></span>
+    </div>
+  </div>  
+</div>
+<div id="co2">
+  <h3>小型CO2偵測器雛形開發</h3>
+  <div class="content">
+    <div>日本偵測器大廠委託開發家用型CO2偵測器雛形，使用其一款高階紅外線CO2感測器，開發平台為Arduino微處理器。</div>
+    <div class="slideshow-container">
+      <div *ngFor="let idx of co2Num" class="mySlides fade co2">
+        <div class="numbertext">{{idx+1}} / {{co2Num.length}}</div>
+        <img src="./assets/images/co2{{idx}}.jpg" style="width:100%">
+        <!-- <div class="text">{{cap}}</div> -->
+      </div>
+      <a class="prev" (click)="plusSlides(-1, 'co2')">&#10094;</a>
+      <a class="next" (click)="plusSlides(1, 'co2')">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span *ngFor="let idx of co2Num"><span class="dot co2" (click)="currentSlide(idx, 'co2')"></span></span>
+    </div>
+  </div>  
+</div>

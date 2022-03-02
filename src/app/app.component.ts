@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'oliver';
+  // title = 'Oliver';
+  // status: boolean = false;
+  w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+  
+  w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
 }

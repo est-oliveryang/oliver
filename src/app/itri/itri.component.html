@@ -1,0 +1,16 @@
+<div class="content">
+  工研院主要參與政府科專計畫的執行，搭配部分的產品開發工作，主要工作成果如下圖片說明。
+</div>
+<div class="slideshow-container">
+  <div *ngFor="let idx of itriNum" class="mySlides fade itri">
+    <div class="numbertext">{{idx+1}} / {{itriNum.length}}</div>
+    <img src="./assets/images/itri{{idx}}.jpg" style="width:100%">
+    <!-- <div class="text">{{cap}}</div> -->
+  </div>
+  <a class="prev" (click)="plusSlides(-1, 'itri')">&#10094;</a>
+  <a class="next" (click)="plusSlides(1, 'itri')">&#10095;</a>
+</div>
+<br>
+<div style="text-align:center">
+  <span *ngFor="let idx of itriNum"><span class="dot itri" (click)="currentSlide(idx, 'itri')"></span></span>
+</div>
