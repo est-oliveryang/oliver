@@ -5,10 +5,12 @@
   </div>
   <ul class="list-unstyled ps-0">
     <li class="mb-1">
-      <button class="btn btn-toggle align-items-left rounded collapsed" data-bs-toggle="collapse" data-bs-target="#estech" aria-expanded="true" style="font-size:x-large;font-weight:bold;">
-        <img src="./assets/images/est-logo.png" height="24">
-        EStech
-      </button>
+      <a routerLink="estech">
+        <button class="btn btn-toggle align-items-left rounded collapsed" data-bs-toggle="collapse" data-bs-target="#estech" aria-expanded="true" style="font-size:x-large;font-weight:bold;">
+          <img src="./assets/images/est-logo.png" height="24">
+          EStech
+        </button>
+      </a>
       <div class="collapse show" id="estech">
         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1">
           <li>
@@ -55,17 +57,19 @@
       </a>
     </li>
     <li class="mb-1">
-      <button class="btn btn-toggle align-items-left rounded collapsed" data-bs-toggle="collapse" data-bs-target="#siuc" aria-expanded="true" style="font-size:x-large;font-weight:bold;">
-        <img src="./assets/images/SIUC-logo.png" height="24">
-        SIUC
-      </button>
+      <a routerLink="siuc">
+        <button class="btn btn-toggle align-items-left rounded collapsed" data-bs-toggle="collapse" data-bs-target="#siuc" aria-expanded="true" style="font-size:x-large;font-weight:bold;">
+          <img src="./assets/images/SIUC-logo.png" height="24">
+          SIUC
+        </button>
+      </a>
       <div class="collapse" id="siuc">
         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1">
           <li >
             <a routerLink="siuc" fragment="bhm" class="w3-bar-item w3-button">Bridge Health Monitoring</a>
           </li>
           <li>
-            <a routerLink="siuc" fragment="ncku" class="w3-bar-item w3-button">Creativity-in-Action</a>
+            <a routerLink="siuc" fragment="ncku" class="w3-bar-item w3-button">NCKU Elite Program</a>
           </li>
           <li>
             <a routerLink="siuc" fragment="other" class="w3-bar-item w3-button">Other</a>
