@@ -1,0 +1,9 @@
+.row {
+  display: flex;
+}
+
+.column {
+  flex: auto;
+  max-width: 300px;
+  padding: 2px;
+}
